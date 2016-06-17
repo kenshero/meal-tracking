@@ -1,0 +1,36 @@
+<ion-view hide-back-button="true">
+
+<ion-view view-title="Dashboard">
+  <ion-content>
+
+    <div class="card" ng-show="pleaseLoginBox">
+      <div class="item item-text-wrap alert-card">
+        {{msgPleaseLogin}}
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col col-33 col-offset-67">
+        <a class="button button-balanced" href="#/app/dashboard/addmeal">
+          + Add Meal
+        </a>
+      </div>
+    </div>
+
+<!--     <ion-list>
+      <ion-item ng-repeat="playlist in playlists" href="#/app/dashboard/{{playlist.id}}">
+        {{playlist.title}}
+      </ion-item>
+    </ion-list> -->
+
+    <div class="list" ng-repeat="(key, value) in sortFoods">
+      <div class="item item-divider" >
+        {{key | date}}
+      </div>
+      <a class="item" href="#/app/dashboard/{{key}}/{{getKeyTime(value,$index)}}" ng-repeat="food in value ">
+        {{food.FoodName}}
+      </a>
+    </div>
+  </ion-content>
+</ion-view>
+

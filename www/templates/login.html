@@ -1,0 +1,27 @@
+<ion-view hide-nav-bar="true">
+  <ion-header-bar  >
+    <h1 class="title">Login</h1>
+  </ion-header-bar>
+  <ion-content>
+
+  <div class="card" ng-show="errorBox">
+    <div class="item item-text-wrap alert-card">
+      {{errorMsg}}
+    </div>
+  </div>
+
+    <form ng-submit="doLogin(username,password)">
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">Username</span>
+          <input type="text" ng-model="username">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Password</span>
+          <input type="password" ng-model="password">
+        </label>
+          <button class="button button-block button-positive" type="submit">Log in</button>
+          <a class="button button-block button-energized" href="#/app/register" >Register</a>
+      </div>
+    </form>
+  </ion-content>

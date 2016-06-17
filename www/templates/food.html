@@ -1,0 +1,50 @@
+<ion-view view-title="Food">
+  <ion-content>
+    <div class="list card">
+
+      <div class="item item-body">
+        <center>
+          <img ng-src="{{food.ImgProfile}}" width="250px">
+        </center>
+        <p class="detail-food">
+          <span>ชื่ออาหาร : </span>
+          {{food.FoodName}}
+        </p>
+
+        <p class="detail-food">
+          <span>โคเลสเตอรอล : </span>
+          {{food.Chorestoral}}
+        </p>
+
+        <p class="detail-food">
+          <span>ไขมัน : </span>
+          {{food.Kaimun}}
+        </p>
+
+        <p class="detail-food">
+          <span>โปรตีน : </span>
+          {{food.Protein}}
+        </p>
+
+        <p class="detail-food">
+          <span>คาร์โบไฮเดต : </span>
+          {{food.Chabohidate}}
+        </p>
+
+        <p class="detail-food">
+          <span>โซเดียม : </span>
+          {{food.Sodium}}
+        </p>
+
+        <p class="detail-food">
+          <span>เวลลา : </span>
+          {{food.DateAte | date:'medium'}}
+        </p>
+
+      </div>
+    </div>
+    
+    <div class="card" id="map"></div>
+
+  </ion-content>
+</ion-view>

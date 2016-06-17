@@ -1,0 +1,39 @@
+<ion-view view-title="Graph">
+  <ion-content>
+    <h1>Graph</h1>
+    <div class="card" ng-if="keys_foods[2] != undefined ">
+        <div class="item item-divider">
+          {{keys_foods[2] | date}}
+        </div>
+        <div class="item item-text-wrap">
+          <canvas id="pie" class="chart chart-pie"
+            chart-data="food_report[2]" chart-labels="labels" chart-legend="true">
+          </canvas> 
+        </div>
+    </div>
+
+
+    <div class="card" ng-if="keys_foods[1] != undefined ">
+        <div class="item item-divider">
+          {{keys_foods[1] | date}}
+        </div>
+        <div class="item item-text-wrap">
+          <canvas id="pie" class="chart chart-pie"
+            chart-data="food_report[1]" chart-labels="labels" chart-legend="true">
+          </canvas> 
+        </div>
+    </div>
+    
+    <div class="card" ng-if="keys_foods[0] != undefined  ">
+        <div class="item item-divider">
+          {{keys_foods[0] | date}}
+        </div>
+        <div class="item item-text-wrap">
+          <canvas id="pie" class="chart chart-pie"
+            chart-data="food_report[0]" chart-labels="labels" chart-legend="true">
+          </canvas> 
+        </div>
+    </div>
+
+  </ion-content>
+</ion-view>

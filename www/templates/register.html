@@ -1,0 +1,29 @@
+<ion-view hide-nav-bar="true">
+  <ion-header-bar  >
+    <h1 class="title">Register</h1>
+  </ion-header-bar>
+  <ion-content>
+
+  <div class="card" ng-show="errorBox">
+    <div class="item item-text-wrap alert-card">
+      {{errorMsg}}
+    </div>
+  </div>
+
+    <form ng-submit="doRegister(email,password,confirmPassword)">
+      <div class="list">
+        <label class="item item-input">
+          <input type="email" ng-model="email" placeholder="Email">
+        </label>
+        <label class="item item-input">
+          <input type="password" ng-model="password" placeholder="Password">
+        </label>
+        <label class="item item-input">
+          <input type="password" ng-model="confirmPassword" placeholder="Confirm Password">
+        </label>
+        <button class="button button-block button-balanced">
+          Register
+        </button>
+      </div>
+    </form>
+  </ion-content>

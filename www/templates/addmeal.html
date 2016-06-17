@@ -1,0 +1,43 @@
+<ion-view view-title="AddMeal">
+  <ion-content>
+  <form ng-submit="ate(foodName,chorestoral,kaimun,protein,chabohidate,sodium)">
+    <input type="file" id="product_img" onchange="angular.element(this).scope().getPicture()" class="button button-block button-default"> 
+
+    <div class="form-group">
+      <center>
+        <img id="image_priview_div">
+      </center>
+    </div>
+    <div class="list">
+      <label class="item item-input">
+        <input type="text" ng-model="foodName" placeholder="ชื่ออาหาร">
+      </label>
+      <label class="item item-input">
+        <input type="number" ng-model="chorestoral" placeholder="โคเลสเตอรอล">
+      </label>
+      <label class="item item-input">
+        <input type="number" ng-model="kaimun" placeholder="ไขมัน">
+      </label>
+      <label class="item item-input">
+        <input type="number" ng-model="protein" placeholder="โปรตีน">
+      </label>
+      <label class="item item-input">
+        <input type="number" ng-model="chabohidate" placeholder="คาร์โบไฮเดต">
+      </label>
+      <label class="item item-input">
+        <input type="number" ng-model="sodium" placeholder="โซเดียม">
+      </label>
+    </div>
+
+
+
+    <center>
+      <button type="submit" class="button button-balanced">Submit</button>
+    </center>
+    
+  </form>
+
+    <div class="card" id="map"></div>
+
+  </ion-content>
+</ion-view>
